@@ -696,6 +696,7 @@ void List<TYPE>::swap(List& other)
     {
         copy(other);
     }
+    other.destroy();
     other.m_head = ours;
     while(ours->m_next != nullptr)
     {
